@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CRM_App.ViewModels"
+             x:Class="CRM_App.Views.RegisterPage"
+             Title="Pagina Inregistrare Cont">
+
+    <ContentPage.BindingContext>
+        <vm:RegisterViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Label Text="Inregistreaza Cont" FontSize="Large" HorizontalOptions="Center" Margin="20" />
+        <Label Text="*Username trebuie sa contina minim 6 caractere alfanumerice" FontSize="Micro"/>
+        <Entry Placeholder="Username" Text="{Binding Username}" />
+        <Label Text="*Parola trebuie sa contina minim 8 caractere alfanumerice" FontSize="Micro"/>
+        <Entry Placeholder="Parola" IsPassword="True" Text="{Binding Password}" />
+        <Entry Placeholder="Confirmare parola" IsPassword="True" Text="{Binding ConfirmPassword}" />
+        <Button Text="Creare Cont" Command="{Binding RegisterCommand}" IsEnabled="{Binding IsRegisterEnabled}" Margin="40"/>
+        <!--<Button Text="Inapoi" Command="{Binding GoToLoginCommand}" Padding="10" Margin="20"/>-->
+    </StackLayout>
+</ContentPage>

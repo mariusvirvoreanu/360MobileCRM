@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.AddProductPage"
+             Title="Pagina Adaugare Produse">
+    <StackLayout Padding="20">
+        <Label Text="Nume Produs" />
+        <Entry Placeholder="Adauga nume produs" x:Name="NameEntry" />
+        <Label x:Name="NameError" TextColor="Red" IsVisible="False" />
+        <Label Text="Descriere Produs" />
+        <Entry Placeholder="Adauga descriere produs" x:Name="DescriptionEntry" />
+        <Label x:Name="DescriptionError" TextColor="Red" IsVisible="False" />
+        <Button Padding="10" Margin="50"  Text="Salveaza" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>

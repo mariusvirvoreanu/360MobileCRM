@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CRM_App"
+             xmlns:vm="clr-namespace:CRM_App.ViewModels"
+             x:Class="CRM_App.Views.MainPage"
+             Title="Pagina Principala">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding WelcomeMessage}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <StackLayout Margin="10">
+            <Label Text="*Cauta client mai jos folosind numele sau emailul clientului" HorizontalTextAlignment="Start" FontSize="Micro" Margin="30,0,0,0"/>
+            <SearchBar x:Name="CustomerSearchBar" Placeholder="Cauta Client.." FontSize="Medium" SearchButtonPressed="OnSearchButtonPressed" TextChanged="OnSearchBarTextChanged" Margin="10" HorizontalTextAlignment="Center"/>
+            <CollectionView x:Name="CustomerCollectionView" SelectionMode="Single" SelectionChanged="OnCustomerSelected" Margin="20">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="{Binding Name}" VerticalOptions="Center"  FontSize="Medium"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        <StackLayout  Margin="10">
+            <Button Text="Adauga Client Nou" Clicked="OnAddCustomerClicked" HeightRequest="50" WidthRequest="160" Margin="15"/>
+            <Button Text="Pagina Vanzari" Clicked="OnUserSalesPageClicked" HeightRequest="50" WidthRequest="160" Margin="15"/>
+            <Button Text="Pagina Solicitari" Clicked="OnMyRequestsClicked" HeightRequest="50" WidthRequest="160" Margin="15"/>
+            <Button Text="Pagina Administrare" Clicked="OnAdminPageClicked" x:Name="AdminPageButton" IsVisible="False" HeightRequest="70" WidthRequest="180" Margin="20"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

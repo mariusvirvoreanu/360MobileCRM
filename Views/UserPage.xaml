@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CRM_App.ViewModels"
+             x:Class="CRM_App.Views.UserPage">
+
+    <ContentPage.BindingContext>
+        <vm:UserViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Label Text="Detalii Utilizator" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="50"/>
+
+        <Label Text="Username" FontAttributes="Bold"/>
+        <Entry Text="{Binding Username}" IsReadOnly="True"/>
+        <Entry Text="{Binding Role}" IsReadOnly="True"/>
+        <Label Margin="10"></Label>
+        <Label Text="Update Parola" FontAttributes="Bold"/>
+        <Label Text="*Parola trebuie sa contina minim 8 caractere alfanumerice" FontSize="Micro"/>
+        <Entry Placeholder="Parola noua" Text="{Binding NewPassword}" IsPassword="True"/>
+        <Entry Placeholder="Confirmare Parola" Text="{Binding ConfirmPassword}" IsPassword="True"/>
+
+        <Button Text="Update Parola" Command="{Binding UpdatePasswordCommand}" IsEnabled="{Binding IsUpdateEnabled}" Margin="20"/>
+        <Button Text="Sterge Cont" Command="{Binding DeleteAccountCommand}" Margin="20"/>
+        <Button Text="Inapoi" Command="{Binding GoToMainCommand}" Margin="20"/>
+
+    </StackLayout>
+</ContentPage>

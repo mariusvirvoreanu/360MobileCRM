@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.AdminPage"
+             Title="Pagina Administrare">
+    <StackLayout Padding="20">
+        <Label Text="Administrare Utilizatori" FontAttributes="Bold" FontSize="Medium" Margin="0,20,0,20" />
+        <ListView x:Name="UsersListView" ItemTapped="OnUserSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Username}" Detail="{Binding Role}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Text="Administrare Produse" FontAttributes="Bold" FontSize="Medium" Margin="0,20,0,20"/>
+        <Button Text="Adauga Produs" Clicked="OnAddProductClicked" />
+        <ListView x:Name="ProductsListView" ItemTapped="OnProductSelected" Margin="0,20,0,20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

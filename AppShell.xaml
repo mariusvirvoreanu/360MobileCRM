@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:CRM_App.Views"
+       x:Class="CRM_App.AppShell">
+
+
+    <ShellItem Route="main" Title="Pagina Principala" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </ShellItem>
+
+    <ShellItem Route="user" Title="Pagina Utilizator" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="UserPage" ContentTemplate="{DataTemplate local:UserPage}" />
+    </ShellItem>
+
+    <ShellItem Route="login" Title="Logout" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </ShellItem>
+
+    <!--<ShellItem Route="register" Title="Creare Cont" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="RegisterPage" ContentTemplate="{DataTemplate local:RegisterPage}"/>
+    </ShellItem>-->
+
+    <!--<ShellItem Route="sales" Title="Pagina Vanzari" FlyoutDisplayOptions="AsSingleItem">
+        <ShellContent Route="UserSalesPage" ContentTemplate="{DataTemplate local:UserSalesPage}" />
+    </ShellItem>-->
+
+    <!--<ShellContent Title="Customer Detail" ContentTemplate="{DataTemplate local:CustomerDetailPage}" Route="CustomerDetailPage" />
+    <ShellContent Title="Update Customer" ContentTemplate="{DataTemplate local:UpdateCustomerPage}" Route="UpdateCustomerPage" />-->
+
+    <!--<FlyoutItem Title="Main" IsVisible="True">
+        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="User" IsVisible="True">
+        <ShellContent Route="UserPage" ContentTemplate="{DataTemplate local:UserPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Login" IsVisible="False">
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />-->
+    <!--</FlyoutItem>-->
+
+    <!--<FlyoutItem Title="Register" IsVisible="False">
+        <ShellContent Route="RegisterPage" ContentTemplate="{DataTemplate local:RegisterPage}"  />
+    </FlyoutItem>-->
+
+    <!--<MenuItem Text="Logout" Command="{Binding LogoutCommand}">
+    </MenuItem>-->
+
+
+
+</Shell>

@@ -1,0 +1,137 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CRM_App
+build_property.ProjectDir = D:\Dizertatie\CRM_App\CRM_App\
+
+[D:/Dizertatie/CRM_App/CRM_App/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/AddCustomerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.AddCustomerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddCustomerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddCustomerPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/AddProductPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.AddProductPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddProductPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddProductPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/AddRequestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.AddRequestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddRequestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddRequestPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/AddSalePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.AddSalePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AddSalePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AddSalePage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/AdminPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.AdminPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AdminPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AdminPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/CustomerDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.CustomerDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CustomerDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CustomerDetailPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/CustomerRequestsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.CustomerRequestsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CustomerRequestsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CustomerRequestsPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UpdateCustomerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UpdateCustomerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UpdateCustomerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UpdateCustomerPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UpdateProductPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UpdateProductPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UpdateProductPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UpdateProductPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UpdateRequestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UpdateRequestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UpdateRequestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UpdateRequestPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UpdateSalePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UpdateSalePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UpdateSalePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UpdateSalePage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UserRequestsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UserRequestsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRequestsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRequestsPage.xaml
+
+[D:/Dizertatie/CRM_App/CRM_App/Views/UserSalesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CRM_App.Views.UserSalesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserSalesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserSalesPage.xaml

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.UpdateProductPage"
+             Title="Pagina Update Produs">
+    <StackLayout Padding="20">
+        <Label Text="Nume Produs" />
+        <Entry x:Name="NameEntry" />
+        <Label Text="Descriere Produs" />
+        <Entry x:Name="DescriptionEntry" />
+        <StackLayout Margin="0,20,0,20">
+            <Button Text="Salveaza" Margin="20" Clicked="OnSaveClicked" />
+            <Button Text="Sterge" Margin="20" Clicked="OnDeleteClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,1 @@
+D:\Dizertatie\CRM_App\CRM_App\CRM_App.csproj;x64

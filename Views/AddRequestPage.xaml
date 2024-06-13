@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.AddRequestPage"
+             Title="Pagina Adaugare Solicitare">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Detalii solicitare" FontSize="Medium" FontAttributes="Bold"  HorizontalOptions="Center" Margin="20"/>
+                <Label Text="Nume Client:"/>
+                <Label x:Name="CustomerName" IsEnabled="False"/>
+                <StackLayout>
+                    <Label Text="Descriere" Margin="0,20,20,0"/>
+                    <Entry Placeholder="Adauga Descriere" x:Name="DescriptionEntry" />
+                    <Label x:Name="DescriptionError" TextColor="Red" IsVisible="False" />
+                    <Label Text="Status" />
+                    <Picker Title="Selecteaza Status" x:Name="StatusPicker">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>trimis la investigare</x:String>
+                                <x:String>inchis</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Label x:Name="StatusPickerError" TextColor="Red" IsVisible="False" />
+                </StackLayout>
+                <Button Text="Adauga Solicitare" Clicked="OnAddRequestClicked" Margin="0,50" WidthRequest="150" HorizontalOptions="Center" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

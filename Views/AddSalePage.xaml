@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.AddSalePage"
+             Title="Pagina Adaugare Vanzare">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Detalii Vanzare" HorizontalTextAlignment="Center" Padding="20" FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="Nume Client:" />
+            <Label x:Name="NameLabel" />
+            <StackLayout Margin="0,20,0,20">
+                <!-- Product Name Picker -->
+                <Label Text="Produs"/>
+                <Picker Title="Alege Produs" x:Name="ProductNamePicker"/>
+                <Label x:Name="ProductError" TextColor="Red" IsVisible="False" />
+                <!-- Total Amount Entry -->
+                <Label Text="Valoare Prima (RON)"/>
+                <Entry Placeholder="Adauga Valoare Prima (RON)" Keyboard="Numeric" x:Name="TotalAmountEntry" />
+                <Label x:Name="AmountError" TextColor="Red" IsVisible="False" />
+                <!-- Description Entry -->
+                <Label Text="Descriere"/>
+                <Entry Placeholder="Adauga descriere" x:Name="DescriptionEntry" />
+                <Label x:Name="DescriptionError" TextColor="Red" IsVisible="False" />
+                <!-- Status Picker -->
+                <Label Text="Status"/>
+                <Picker Title="Selecteaza Status" x:Name="StatusPicker"/>
+            </StackLayout>
+
+            <Button Text="Adauga Vanzare" Margin="20" WidthRequest="150"  Clicked="OnSaveClicked" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRM_App.Views.UpdateRequestPage"
+             Title="Pagina Solicitare Client">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Detalii Solicitare" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center" Margin="20"/>
+                <Label Text="Nume Client:"/>
+                <Label x:Name="CustomerName" IsEnabled="False"/>
+                <StackLayout Margin="0,20,0,20">
+                <Label Text="Descriere" />
+                <Entry Placeholder="Adauga descriere" x:Name="DescriptionEntry" />
+                <Label x:Name="DescriptionError" TextColor="Red" IsVisible="False" />
+                <Label Text="Status" />
+                <Picker x:Name="StatusPicker" Title="Selecteaza Status">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>trimis la investigare</x:String>
+                            <x:String>inchis</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label x:Name="StatusPickerError" TextColor="Red" IsVisible="False" />
+                </StackLayout>
+                <Button Text="Actualizeaza Solicitare" Clicked="OnUpdateRequestClicked" Padding="10" Margin="10" WidthRequest="180"/>
+                <Button Text="Sterge Solicitare" Clicked="OnDeleteRequestClicked" Padding="10" Margin="10" WidthRequest="180"/>
+
+                <StackLayout Margin="0,20,0,20">
+                    <Label Text="Comentariu"/>
+                    <Entry x:Name="CommentEntry" Placeholder="Adauga un comentariu" />
+                    <Label x:Name="CommentError" TextColor="Red" IsVisible="False" />
+                    <Button Text="Adauga comentariu" Clicked="OnAddCommentClicked" Padding="10" Margin="10" WidthRequest="180"/>
+                </StackLayout>
+
+                <Label Text="Comentarii" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="10,0,0,10"/>
+                <CollectionView x:Name="CommentsCollectionView" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Vertical" Margin="10,0,0,10">
+                                <Label Text="{Binding CommentText}" />
+                                <Label Text="{Binding UserName}"/>
+                                <Label Text="{Binding Timestamp}" FontSize="Small" TextColor="Gray" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
