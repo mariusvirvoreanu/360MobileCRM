@@ -1,6 +1,5 @@
 using CRM_App.Data;
 using CRM_App.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace CRM_App.Views;
 
@@ -47,7 +46,7 @@ public partial class CustomerDetailPage : ContentPage
         var result = await DisplayAlert("Info", "Sunteti sigur ca doriti sa stergeti acest client?", "Da", "Nu");
         if (result)
         {
-            //check if client has sales and requests
+            //verificare: clientul are vanzari sau solicitari ?
             var sales = await DatabaseHelper.GetAllSalesForCustomerAsync(CustomerId);
             if (sales.Count>0) 
             {
@@ -86,12 +85,12 @@ public partial class CustomerDetailPage : ContentPage
                     {
                         return;
                     }
-                    //first delete comments
+                    //prima data stergem comentariile
                     foreach (Request request in requests)
                     {
                         await DatabaseHelper.DeleteCommentsAsync(request.RequestID);
                     }
-                    //delete requests
+                    //stergere solicitari
                     int rowsDeleted = await DatabaseHelper.DeleteRequestsAsync(requests);
                     if (rowsDeleted == 0)
                     {
@@ -128,16 +127,16 @@ public partial class CustomerDetailPage : ContentPage
     }
     private async void OnUpdateSaleClicked(object sender, EventArgs e)
     {
-        // Get the sale ID from the command parameter
+        //sale ID de la command parameter
         int saleId = (int)((Button)sender).CommandParameter;
-        // Navigate to update sale page passing the sale ID
+        //Navigare pagina update vanzare pt saleID
         await Navigation.PushAsync(new UpdateSalePage(saleId));
     }
     private async void OnDeleteSaleClicked(object sender, EventArgs e)
     {
-        // Get the sale ID from the command parameter
+        //saleID de la command parameter
         int saleId = (int)((Button)sender).CommandParameter;
-        // Confirm deletion
+        //Confirmare stergere
         bool confirmDelete = await DisplayAlert("Atentie!", "Sunteti sigur ca doriti stergerea acestui produs din lista?", "Da", "Nu");
         if (confirmDelete)
         {
@@ -149,14 +148,14 @@ public partial class CustomerDetailPage : ContentPage
             else
             {
                 await DisplayAlert("Info", "Produsul a fost sters", "Ok");
-                // Reload sales for the customer
+                //Reincarcare vanzari client
                 LoadSales(_customerId);
             } 
         }
     }
     private void OnSaleSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        // Deselect the selected item
+        //Deselectare item selectat
         ((ListView)sender).SelectedItem = null;
     }
     private async void OnAddRequestClicked(object sender, EventArgs e)

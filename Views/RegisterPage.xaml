@@ -17,6 +17,6 @@
         <Entry Placeholder="Parola" IsPassword="True" Text="{Binding Password}" />
         <Entry Placeholder="Confirmare parola" IsPassword="True" Text="{Binding ConfirmPassword}" />
         <Button Text="Creare Cont" Command="{Binding RegisterCommand}" IsEnabled="{Binding IsRegisterEnabled}" Margin="40"/>
-        <!--<Button Text="Inapoi" Command="{Binding GoToLoginCommand}" Padding="10" Margin="20"/>-->
     </StackLayout>
+    
 </ContentPage>

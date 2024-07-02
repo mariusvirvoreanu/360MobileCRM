@@ -2,7 +2,6 @@
 using CRM_App.ViewModels;
 using CRM_App.Views;
 using Microsoft.Extensions.Logging;
-using SQLite;
 
 namespace CRM_App;
 
@@ -22,10 +21,8 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-        //string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CRM.db3");
-        //builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<DatabaseHelper>(s, dbPath));
-        builder.Services.AddSingleton<DatabaseHelper>();
 
+        builder.Services.AddSingleton<DatabaseHelper>();
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<MainPage>();
         builder.Services.AddTransient<RegisterPage>();

@@ -17,11 +17,8 @@ public partial class LoginPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        //empty password on appearing
+        //stergem campul parola cand apare
         PasswordEntry.Text = string.Empty;
     }
-
-
-
 
 }

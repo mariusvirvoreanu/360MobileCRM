@@ -1,9 +1,4 @@
 ﻿using CRM_App.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CRM_App.Data
 {
@@ -15,7 +10,6 @@ namespace CRM_App.Data
             get { return isLoggedIn; }
             set { isLoggedIn = value; }
         }
-
         public static User LoggedUser { get; set; }
     }
 }

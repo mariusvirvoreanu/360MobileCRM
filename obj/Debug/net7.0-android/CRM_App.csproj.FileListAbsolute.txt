@@ -197,6 +197,7 @@ D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\Mono.Andro
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\Mono.Android.Export.pdb
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\Mono.Android.pdb
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\netstandard.dll
+D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\Newtonsoft.Json.dll
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\SQLite-net.dll
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.batteries_v2.dll
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.core.dll

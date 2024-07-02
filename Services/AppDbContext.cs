@@ -27,7 +27,7 @@ namespace CRM_App.Services
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //Statuses will only have the below statuses
+            //tabela Statuses va avea decat valorile de mai jos
             modelBuilder.Entity<Status>().HasData(
                 new Status { StatusID = 1, StatusName = "in desfasurare" },
                 new Status { StatusID = 2, StatusName = "finalizat" },

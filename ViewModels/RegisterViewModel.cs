@@ -1,10 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CRM_App.Data;
 using CRM_App.Models;
 using System.ComponentModel;
-using CRM_App.Services;
-using CRM_App.Data;
-using BCrypt.Net;
 
 namespace CRM_App.ViewModels
 {
@@ -59,22 +57,22 @@ namespace CRM_App.ViewModels
 
         private async Task RegisterAsync()
         {
-            //Check if the username already exists
+            //Verificam daca username exista
             var existingUser = await DatabaseHelper.GetUserByUsernameAsync(Username);
             if (existingUser != null)
             {
                 await Application.Current.MainPage.DisplayAlert("Eroare creare cont", "Contul exista deja", "OK");
                 return;
             }
-            //Check if passwords match
+            //Verificam parola
             if (Password != ConfirmPassword)
             {
                 await Application.Current.MainPage.DisplayAlert("Eroare creare cont", "Eroare verificare parola", "OK");
                 return;
             }
-            //Hash the password
+            //Hash parola
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-            // Create and add the new user
+            //Creare utilizator nou
             var newUser = new User 
             { 
                 Username = Username, 
@@ -88,7 +86,7 @@ namespace CRM_App.ViewModels
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("Succes înregistrare cont", "Pute-ți să vă logați", "OK");
+                await Application.Current.MainPage.DisplayAlert("Succes înregistrare cont", "Puteți să vă logați", "OK");
                 await Shell.Current.GoToAsync("///LoginPage");
             }
         }
@@ -97,29 +95,5 @@ namespace CRM_App.ViewModels
             await Shell.Current.GoToAsync("///LoginPage");
         }
 
-        //private async Task RegisterAsync()
-        //{
-        //    // Check if the username already exists
-        //    var existingUser = App.DatabaseHelper.GetUserByUsername(Username);
-        //    if (existingUser != null)
-        //    {
-        //        await Application.Current.MainPage.DisplayAlert("Registration Failed", "Username already exists", "OK");
-        //        return;
-        //    }
-        //    // Check if passwords match
-        //    if (Password != ConfirmPassword)
-        //    {
-        //        await Application.Current.MainPage.DisplayAlert("Registration Failed", "Passwords do not match", "OK");
-        //        return;
-        //    }
-        //    // Hash the password
-        //    var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-        //    // Create and add the new user
-        //    var newUser = new User { Username = Username, Password = hashedPassword, Role = "agent" };
-        //    App.DatabaseHelper.AddUser(newUser);
-
-        //    await Application.Current.MainPage.DisplayAlert("Registration Successful", "You can now log in", "OK");
-        //    await Shell.Current.GoToAsync("///LoginPage");
-        //}
     }
 }

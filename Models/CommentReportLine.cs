@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CRM_App.Models
+﻿namespace CRM_App.Models
 {
     public class CommentReportLine
     {

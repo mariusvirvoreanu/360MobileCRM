@@ -44,6 +44,7 @@ D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Mic
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll

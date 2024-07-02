@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9NkIxQv70ngAhdJJvTYRVqPe9I4MYcUG47hvroYgGTTeAS/hxNAo7qxbbY+hMNvYjtD2Fw92L0R3oohFgvv8Eg==",
+  "dgSpecHash": "ifK5mj5PE9xhB1Uxu3qkOf1V6HwcMHIrAXLBUJEpP57/drpEL++2rHMH1h7g5XUb8mmMftpASKYcg3Sd/jU3vQ==",
   "success": true,
   "projectFilePath": "D:\\Dizertatie\\CRM_App\\CRM_App\\CRM_App.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\mariu\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\7.0.86\\microsoft.maui.graphics.win2d.winui.desktop.7.0.86.nupkg.sha512",
     "C:\\Users\\mariu\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.755\\microsoft.windows.sdk.buildtools.10.0.22621.755.nupkg.sha512",
     "C:\\Users\\mariu\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
+    "C:\\Users\\mariu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\mariu\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\mariu\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\mariu\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.0\\sqlitepclraw.bundle_green.2.1.0.nupkg.sha512",

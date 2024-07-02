@@ -1,9 +1,6 @@
 using CRM_App.Data;
 using CRM_App.Models;
-using CRM_App.ViewModels;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace CRM_App.Views;
 
@@ -83,18 +80,18 @@ public partial class MainPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        //check user to be logged
+        //verificam daca userul este logat
         if (AuthenticationManager.LoggedUser.UserID==0)
         {
             await DisplayAlert("Eroare", "Nu sunteti logat!", "Ok");
             await Shell.Current.GoToAsync("///LoginPage");
         }
-        // Show the flyout menu when the MainPage appears
+        //afisam meniul flyout in pagina principala
         ShowFlyoutMenu();
-        //Search Client empty data
+        //Search Client = empty
         CustomerSearchBar.Text = string.Empty;
         _customers.Clear();
-        //show admin button
+        //butonul pagina administrare este activ doar daca userul logat este admin
         if (AuthenticationManager.LoggedUser.Role == "admin")
         {
             AdminPageButton.IsVisible = true;
@@ -102,10 +99,10 @@ public partial class MainPage : ContentPage
     }
     private void ShowFlyoutMenu()
     {
-        // Activate the flyout menu if the Shell's navigation stack contains only one page (i.e., the MainPage)
+        //activare meniu flyout menu
         if (Shell.Current.Navigation.NavigationStack.Count == 1)
         {
-            // Open the flyout menu by setting the FlyoutIsPresented property to true
+            //deschidere meniu flyout => setare proprietate FlyoutIsPresented = true
             Shell.SetFlyoutBehavior(this, FlyoutBehavior.Flyout);
         }
     }

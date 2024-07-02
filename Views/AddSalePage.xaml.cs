@@ -1,7 +1,5 @@
 using CRM_App.Data;
 using CRM_App.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Xml;
 
 namespace CRM_App.Views;
 
@@ -31,7 +29,6 @@ public partial class AddSalePage : ContentPage
         BindingContext = customer;
         NameLabel.Text = customer.Name;
     }
-
     private async void LoadProductsAndStatuses()
     {
         List<Product> products = await DatabaseHelper.GetAllProductsAsync();
@@ -47,7 +44,6 @@ public partial class AddSalePage : ContentPage
         //default = 'in progress'
         StatusPicker.SelectedIndex = 0;
     }
-
     private async void OnSaveClicked(object sender, EventArgs e)
     {
         bool isValid = ValidateFields();
@@ -86,15 +82,14 @@ public partial class AddSalePage : ContentPage
         else
         {
             await DisplayAlert("Info", "Vanzare adaugata cu succes", "OK");
-            // Navigate back to the client page
+            //Navigare back la pagina client
             await Navigation.PopAsync();
         }
     }
-
     private bool ValidateFields()
     {
         bool isValid = true;
-        // Validate Product
+        //Validare Produs 
         if (string.IsNullOrWhiteSpace(ProductNamePicker.SelectedItem?.ToString()))
         {
             ProductError.Text = "Selectati Produsul!";
@@ -105,8 +100,8 @@ public partial class AddSalePage : ContentPage
         {
             ProductError.IsVisible = false;
         }
-        //Validate TotalAmountEntry
-        if(double.TryParse(TotalAmountEntry.Text.Trim(), out double totalAmount))
+        //Validare Suma
+        if (double.TryParse(TotalAmountEntry.Text.Trim(), out double totalAmount))
         {
             AmountError.IsVisible = false;
         }
@@ -116,7 +111,7 @@ public partial class AddSalePage : ContentPage
             AmountError.IsVisible = true;
             isValid = false;
         }
-        // Validate Description
+        //Validare Descriere
         if (string.IsNullOrWhiteSpace(DescriptionEntry.Text))
         {
             DescriptionError.Text = "Completati descrierea!";
@@ -130,6 +125,5 @@ public partial class AddSalePage : ContentPage
 
         return isValid;
     }
-
 
 }

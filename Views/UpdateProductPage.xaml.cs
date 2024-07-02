@@ -8,7 +8,6 @@ public partial class UpdateProductPage : ContentPage
 {
     private int _productId;
     private Product _product;
-
     public int ProductId
     {
         get => _productId;
@@ -47,7 +46,7 @@ public partial class UpdateProductPage : ContentPage
             else
             {
                 await DisplayAlert("Info", "Produs actualizat", "Ok");
-                //go back to admin page
+                //navigare pagina admin
                 await Shell.Current.Navigation.PopAsync();
             }
             
@@ -65,7 +64,7 @@ public partial class UpdateProductPage : ContentPage
             else
             {
                 await DisplayAlert("Info", "Produs a fost sters", "Ok");
-                //go back to admin page
+                //navigare pagina admin
                 await Shell.Current.Navigation.PopAsync();
             }
             

@@ -43,26 +43,5 @@ public partial class CustomerRequestsPage : ContentPage
         var requestId = (int)button.CommandParameter;
         await Shell.Current.GoToAsync($"{nameof(UpdateRequestPage)}?RequestId={requestId}");
     }
-    //private async void OnEditRequestClicked(object sender, EventArgs e)
-    //{
-    //    var requestId = ((Button)sender).CommandParameter.ToString();
-    //    await Shell.Current.GoToAsync($"{nameof(UpdateRequestPage)}?RequestId={requestId}");
-    //}
-
-    //private async void OnDeleteRequestClicked(object sender, EventArgs e)
-    //{
-    //    int requestId = (int)((Button)sender).CommandParameter;
-    //    int result = await DatabaseHelper.DeleteRequestAsync(requestId);
-    //    if (result == 0)
-    //    {
-    //        await DisplayAlert("Eroare", "Nu am putut sterge cererea clientului", "Ok");
-    //    }
-    //    else
-    //    {
-    //        await DisplayAlert("Info", "Cererea clientului a fost stearsa", "Ok");
-    //        await LoadCustomerRequests();
-    //    }
-    //}
-
 
 }

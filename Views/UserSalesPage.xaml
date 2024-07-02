@@ -28,7 +28,7 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <!-- First Row: Sale Information -->
+                                <!-- 1st Row: Informatii vanzare -->
                                 <StackLayout Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
                                     <Label Text="Nume Client: " FontAttributes="Bold" />
                                     <Label Text="{Binding CustomerName}" />
@@ -48,7 +48,7 @@
                                     <Label Text="{Binding Description}" />
                                 </StackLayout>
 
-                                <!-- Second Row: Action Buttons -->
+                                <!-- 2nd Row: butoane actiuni -->
                                 <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
                                     <Button Text="Editeaza"
                                             BackgroundColor="DarkBlue"

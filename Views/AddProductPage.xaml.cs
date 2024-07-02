@@ -33,15 +33,14 @@ public partial class AddProductPage : ContentPage
         else
         {
             await DisplayAlert("Info", "Produs adaugat cu succes", "Ok");
-            //go back to admin page
+            //navigare la pagina admin
             await Shell.Current.Navigation.PopAsync();
         }
     }
-
     private bool ValidateFields()
     {
         bool isValid = true;
-        // Validate Name
+        //Validare Nume
         if (string.IsNullOrWhiteSpace(NameEntry.Text))
         {
             NameError.Text = "Completati numele produsului!";
@@ -52,7 +51,7 @@ public partial class AddProductPage : ContentPage
         {
             NameError.IsVisible = false;
         }
-        // Validate Description
+        //Validare Descriere
         if (string.IsNullOrWhiteSpace(DescriptionEntry.Text))
         {
             DescriptionError.Text = "Completati descrierea produsului!";

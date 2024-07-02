@@ -1,5 +1,4 @@
 ﻿using CRM_App.Views;
-using Microsoft.Maui.Controls;
 using System.Windows.Input;
 
 namespace CRM_App;
@@ -10,9 +9,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
-        // Register routes for pages
-        //Routing.RegisterRoute("///LoginPage", typeof(LoginPage));
-        //Routing.RegisterRoute("///MainPage", typeof(MainPage));
+        //Inregistrare rute pagini
         Routing.RegisterRoute("///RegisterPage", typeof(RegisterPage));
         Routing.RegisterRoute(nameof(UserPage), typeof(UserPage));
         Routing.RegisterRoute(nameof(AddCustomerPage), typeof(AddCustomerPage));
@@ -29,11 +26,11 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(UpdateRequestPage), typeof(UpdateRequestPage));
         Routing.RegisterRoute(nameof(UserRequestsPage), typeof(UserRequestsPage));
 
-        //Set the BindingContext for command bindings
+        //Setare BindingContext pentru command bindings
         BindingContext = this; 
-        //Logout Command
+        //Comanda Logout
         LogoutCommand = new Command(async () => await LogoutAsync());
-        // Hide the Flyout menu initially
+        //initial ascundem meniul Flyout
         HideFlyoutMenu();
     }
 
@@ -41,33 +38,33 @@ public partial class AppShell : Shell
 
     private async Task LogoutAsync()
     {
-        // Clear IsLoggedIn flag
+        //Clear flag IsLoggedIn 
         Data.AuthenticationManager.IsLoggedIn = false;
-        // Hide the Flyout menu
+        //Ascundere meniu Flyout
         HideFlyoutMenu();
-        // Navigate to LoginPage
+        //Navigare pagina Login
         await Shell.Current.GoToAsync("///LoginPage");
     }
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        // Navigate to LoginPage after the AppShell is fully initialized
+        //Navigare la pagina Login dupa ce AppShell este initializata complet
         await AppShell.NavigateToLoginPage();
     }
     private static async Task NavigateToLoginPage()
     {
-        // Check if LoginPage is already in the navigation stack
+        //Verificare daca Pagina login este deja in navigation stack
         if (!Shell.Current.Navigation.NavigationStack.Any(page => page is LoginPage))
         {
-            // Navigate to LoginPage using absolute route ///
+            //route absoluta => ///
             await Shell.Current.GoToAsync("///LoginPage");
         }
     }
     public void ShowFlyoutMenu()
     {
-        // Set FlyoutBehavior to enabled
+        //Setare FlyoutBehavior = enabled
         this.FlyoutBehavior = FlyoutBehavior.Flyout;
-        // Enable all FlyoutItems
+        //FlyoutItems=> visible
         foreach (var item in this.Items)
         {
             if (item is FlyoutItem flyoutItem)
@@ -78,9 +75,9 @@ public partial class AppShell : Shell
     }
     public void HideFlyoutMenu()
     {
-        // Set FlyoutBehavior to disabled
+        //Setare FlyoutBehavior = disabled
         this.FlyoutBehavior = FlyoutBehavior.Disabled;
-        // Hide all FlyoutItems
+        //FlyoutItems = hidden
         foreach (var item in this.Items)
         {
             if (item is FlyoutItem flyoutItem)

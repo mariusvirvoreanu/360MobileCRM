@@ -46,7 +46,7 @@ namespace CRM_App.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Logare cu succes", "Bine ai venit!", "OK");
                 AuthenticationManager.IsLoggedIn = true;
                 AuthenticationManager.LoggedUser = user;
-                // Navigate to the main page of your app
+                //Navigare la pagina principala
                 await Shell.Current.GoToAsync("///MainPage");
             }
             else
@@ -58,24 +58,6 @@ namespace CRM_App.ViewModels
         {
             await Shell.Current.GoToAsync("///RegisterPage");
         }
-
-        //private async Task LoginAsync()
-        //{
-        //    var user = App.DatabaseHelper.GetUserByUsername(Username);
-
-        //    if (user != null && BCrypt.Net.BCrypt.Verify(Password, user.Password))
-        //    {
-        //        await Application.Current.MainPage.DisplayAlert("Logare cu succes", "Bine ai venit!", "OK");
-        //        AuthenticationManager.IsLoggedIn = true;
-        //        AuthenticationManager.LoggedUser = user;
-        //        // Navigate to the main page of your app
-        //        await Shell.Current.GoToAsync("///MainPage");
-        //    }
-        //    else
-        //    {
-        //        await Application.Current.MainPage.DisplayAlert("Logare esuata", "Credentiale invalide!", "OK");
-        //    }
-        //}
 
     }
 }

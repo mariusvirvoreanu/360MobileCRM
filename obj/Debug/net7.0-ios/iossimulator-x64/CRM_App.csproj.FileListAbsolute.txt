@@ -23,6 +23,7 @@ D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Ex
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Options.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Extensions.Primitives.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\Microsoft.Maui.Graphics.dll
+D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\Newtonsoft.Json.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\SQLite-net.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\SQLitePCLRaw.batteries_v2.dll
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\SQLitePCLRaw.core.dll
@@ -290,4 +291,3 @@ D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\refint\CRM_A
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\CRM_App.pdb
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\CRM_App.genruntimeconfig.cache
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\ref\CRM_App.dll
-D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\build-signature\signature

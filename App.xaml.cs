@@ -1,14 +1,12 @@
-﻿using Microsoft.Maui;
-using Microsoft.Maui.Controls;
+﻿using CRM_App.Data;
 using Application = Microsoft.Maui.Controls.Application;
-using CRM_App.Data;
-using CRM_App.Views;
 
 namespace CRM_App;
 
 public partial class App : Application
 {
     public static DatabaseHelper DatabaseHelper { get; private set; }
+
 	public App(DatabaseHelper databaseHelper)
 	{
 		InitializeComponent();
@@ -22,7 +20,7 @@ public partial class App : Application
         base.OnStart();
         DatabaseHelper.InitializeDatabase().Wait();
 
-        // Check if the user is logged in
+        //verificare daca user este logat
         if (Data.AuthenticationManager.IsLoggedIn)
         {
             ((AppShell)MainPage).ShowFlyoutMenu();

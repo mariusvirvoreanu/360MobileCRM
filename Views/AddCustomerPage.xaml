@@ -11,6 +11,17 @@
             Margin="30"
             FontSize="Large"/>
 
+        <HorizontalStackLayout x:Name="adminMenu"  IsVisible="False">
+            <Button Text="Cauta PJ ANAF" FontSize="Micro"  
+                    HeightRequest="35" WidthRequest="100" 
+                    HorizontalOptions="StartAndExpand" 
+                    Margin="20,0,20,0"
+                    Clicked="OnSearchANAFClicked"/>
+            <Button Text="Curata Formular" FontSize="Micro"  
+                    HeightRequest="35" WidthRequest="110"
+                     Clicked="OnClearClicked"/>
+        </HorizontalStackLayout>
+
         <StackLayout Padding="20">
 
             <Label Text="Nume" />

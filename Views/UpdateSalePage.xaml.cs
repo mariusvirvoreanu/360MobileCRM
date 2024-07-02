@@ -9,12 +9,14 @@ namespace CRM_App.Views;
 public partial class UpdateSalePage : ContentPage
 {
     private readonly int _saleId;
+
     public UpdateSalePage(int saleId)
     {
         InitializeComponent();
         _saleId = saleId;
-        // Load the sale details
+        //Incarcare lista statusuri
         LoadStatuses();
+        //Incarcare detalii vanzare
         LoadSaleDetails();
         
     }
@@ -77,7 +79,7 @@ public partial class UpdateSalePage : ContentPage
             else
             {
                 await DisplayAlert("Info", "Vanzarea a fost actualizata", "Ok");
-                //Navigate back to the customer detail page
+                //customer detail page
                 await Navigation.PopAsync();
             }
         }
@@ -86,4 +88,5 @@ public partial class UpdateSalePage : ContentPage
             await DisplayAlert("Eroare", "Vanzarea nu a fost gasita", "Ok");
         }
     }
+
 }

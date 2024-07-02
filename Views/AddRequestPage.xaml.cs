@@ -7,7 +7,6 @@ namespace CRM_App.Views;
 public partial class AddRequestPage : ContentPage
 {
     private int _customerId;
-
     public int CustomerId
     {
         get => _customerId;
@@ -27,7 +26,6 @@ public partial class AddRequestPage : ContentPage
         CustomerName.Text = DatabaseHelper.GetCustomerByIdAsync(_customerId).Result.Name;
         StatusPicker.SelectedIndex = 0;
     }
-
     private async void OnAddRequestClicked(object sender, EventArgs e)
     {
         bool isValid = ValidateFields();
@@ -58,7 +56,7 @@ public partial class AddRequestPage : ContentPage
     private bool ValidateFields()
     {
         bool isValid = true;
-        // Validate Product
+        //Validare Produs
         if (string.IsNullOrWhiteSpace(StatusPicker.SelectedItem?.ToString()))
         {
             StatusPickerError.Text = "Selectati statusul!";
@@ -69,7 +67,7 @@ public partial class AddRequestPage : ContentPage
         {
             StatusPickerError.IsVisible = false;
         }
-        // Validate Description
+        //Validare Descriere
         if (string.IsNullOrWhiteSpace(DescriptionEntry.Text))
         {
             DescriptionError.Text = "Completati descrierea!";

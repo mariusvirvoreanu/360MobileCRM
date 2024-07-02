@@ -1,6 +1,4 @@
 using CRM_App.Data;
-using CRM_App.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace CRM_App.Views;
 
@@ -9,9 +7,9 @@ public partial class UserSalesPage : ContentPage
     public UserSalesPage()
 	{
         InitializeComponent();
-        //load username
+        //username
         Username.Text = AuthenticationManager.LoggedUser.Username;
-        // Load sales for the selected user
+        //incarcare vanzari
         LoadSales();
     }
 
@@ -22,23 +20,23 @@ public partial class UserSalesPage : ContentPage
     }
     private async void LoadSales()
     {
-        // Fetch sales for the selected user from the database
+        //vanzarile utilizatorului logat
         var sales = await DatabaseHelper.GetSalesReportForUser(AuthenticationManager.LoggedUser.UserID);
-        // Bind sales to the ListView
+        //Bind vanzari la ListView
         SalesCollectionView.ItemsSource = sales;
     }
     private async void OnUpdateSaleClicked(object sender, EventArgs e)
     {
-        // Get the sale ID from the command parameter
+        //saleID din command parameter
         int saleId = (int)((Button)sender).CommandParameter;
-        // Navigate to update sale page passing the sale ID
+        //navigare pagina update vanzare aferenta saleID
         await Navigation.PushAsync(new UpdateSalePage(saleId));
     }
     private async void OnDeleteSaleClicked(object sender, EventArgs e)
     {
-        // Get the sale ID from the command parameter
+        //saleID din command parameter
         int saleId = (int)((Button)sender).CommandParameter;
-        // Confirm deletion
+        //Confirmare stergere
         bool confirmDelete = await DisplayAlert("Atentie!", "Sunteti sigur ca doriti stergerea acestui produs din lista?", "Da", "Nu");
         if (confirmDelete)
         {
@@ -50,14 +48,14 @@ public partial class UserSalesPage : ContentPage
             else
             {
                 await DisplayAlert("Info", "Produsul a fost sters", "Ok");
-                // Reload sales for the customer
+                //reincarcare vanzari client
                 LoadSales();
             }
         }
     }
     private void OnSaleSelected(object sender, SelectedItemChangedEventArgs e)
     { 
-        // Deselect the selected item
+        //deselectare item selectat
         ((ListView)sender).SelectedItem = null;
     }
 

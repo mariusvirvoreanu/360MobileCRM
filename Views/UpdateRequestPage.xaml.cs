@@ -33,7 +33,7 @@ public partial class UpdateRequestPage : ContentPage
         var request = DatabaseHelper.GetRequestById(RequestId);
         if (request == null)
         {
-            await DisplayAlert("Eroare", "Nu am putut incarca date solicitare client", "Ok");
+            await DisplayAlert("Eroare", "Nu am putut incarca detalii solicitare client", "Ok");
         }
         else
         {
@@ -75,7 +75,7 @@ public partial class UpdateRequestPage : ContentPage
     }
     private async void OnDeleteRequestClicked(object sender, EventArgs e)
     {
-        //1st delete comments
+        //1st stergere comentarii
         try 
         { 
             await DatabaseHelper.DeleteCommentsAsync(RequestId); 
@@ -85,7 +85,7 @@ public partial class UpdateRequestPage : ContentPage
             await DisplayAlert("Eroare", "Nu am putut sterge comentariile din solicitare", "Ok");
             return;
         }
-        //2nd delete request
+        //2nd stergere solicitare
         int result = await DatabaseHelper.DeleteRequestAsync(RequestId);
         if (result == 0)
         {
@@ -121,7 +121,7 @@ public partial class UpdateRequestPage : ContentPage
         }
         else
         {
-            CommentsCollectionView.ItemsSource = null; // Refresh the collection view
+            CommentsCollectionView.ItemsSource = null; //Refresh collection view
             CommentsCollectionView.ItemsSource = await DatabaseHelper.GetCommentsReportForRequest(RequestId);
             CommentEntry.Text = string.Empty;
             await DisplayAlert("Info", "Comentariul a fost adaugat", "Ok");
@@ -130,7 +130,7 @@ public partial class UpdateRequestPage : ContentPage
     private bool ValidateFields()
     {
         bool isValid = true;
-        // Validate Product
+        //Validare Status
         if (string.IsNullOrWhiteSpace(StatusPicker.SelectedItem?.ToString()))
         {
             StatusPickerError.Text = "Selectati statusul!";
@@ -141,7 +141,7 @@ public partial class UpdateRequestPage : ContentPage
         {
             StatusPickerError.IsVisible = false;
         }
-        // Validate Description
+        // Validare Descriere
         if (string.IsNullOrWhiteSpace(DescriptionEntry.Text))
         {
             DescriptionError.Text = "Completati descrierea!";
@@ -158,7 +158,6 @@ public partial class UpdateRequestPage : ContentPage
     private bool ValidatComment()
     {
         bool isValid = true;
-        // Validate Product
         if (string.IsNullOrWhiteSpace(CommentEntry.Text))
         {
             CommentError.Text = "Adaugati comentariul!";

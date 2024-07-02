@@ -1,12 +1,7 @@
 ﻿using CRM_App.Models;
 using CRM_App.Services;
 using Microsoft.EntityFrameworkCore;
-using SQLite;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace CRM_App.Data
 {
@@ -33,9 +28,6 @@ namespace CRM_App.Data
             {
                 await dbContext.Database.EnsureCreatedAsync();
             }
-
-            //Initialize the statuses
-            //await InitializeStatuses(databasePath);
         }
 
         #region User
@@ -450,9 +442,7 @@ namespace CRM_App.Data
                 return 0;
             }
         }
-
-     
-         public static async Task<List<CommentReportLine>> GetCommentsReportForRequest(int requestId)
+        public static async Task<List<CommentReportLine>> GetCommentsReportForRequest(int requestId)
         {
             List<CommentReportLine> list = new List<CommentReportLine>();
             using (var dbContext = new AppDbContext(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CRM.db3")))
@@ -485,101 +475,5 @@ namespace CRM_App.Data
 
         #endregion   
 
-
-
-        //private static async Task InitializeStatuses(string databasePath)
-        //{
-        //    using (var dbContext = new AppDbContext(databasePath))
-        //    {
-        //        var statuses = new List<Status>
-        //        {
-        //            new Status { StatusName = "in progress" },
-        //            new Status { StatusName = "completed" },
-        //            new Status { StatusName = "canceled" }
-        //        };
-
-        //        foreach (var status in statuses)
-        //        {
-        //            var existingStatus = await dbContext.Statuses.FirstOrDefaultAsync(s => s.StatusName == status.StatusName);
-        //            if (existingStatus == null)
-        //            {
-        //                await dbContext.Statuses.AddAsync(status);
-        //            }
-        //        }
-
-        //        await dbContext.SaveChangesAsync();
-        //    }
-        //}
-
-        //SQLiteConnection conn;
-        //string _dbPath;
-
-        //public DatabaseHelper(string dbPath)
-        //{
-        //    _dbPath=dbPath;
-        //}
-        //public void InitializeDatabase()
-        //{
-        //    if (conn != null)
-        //        return;
-
-        //    conn = new SQLiteConnection(_dbPath);
-        //    conn.CreateTable<User>();
-        //    conn.CreateTable<Customer>();
-        //    conn.CreateTable<Product>();
-        //    conn.CreateTable<Sale>();
-        //    conn.CreateTable<Status>();
-        //    conn.CreateTable<Request>();
-        //    conn.CreateTable<Comment>();
-        //}
-        //public void AddUser(User user)
-        //{
-        //    InitializeDatabase();
-        //    var result = conn.Insert(user);
-        //    if (result == 0)
-        //    {
-        //        Shell.Current.DisplayAlert("Eroare", "Nu am putut crea contul", "Ok");
-        //    }
-        //    else
-        //    {
-        //        Shell.Current.DisplayAlert("Info", "Cont creat cu succes", "Ok");
-        //    }
-        //}
-        //public User GetUserByUsername(string username)       
-        //{
-        //    InitializeDatabase();
-        //    return conn.Table<User>().Where(u => u.Username == username).FirstOrDefault();
-        //}
-        //public int UpdateUser(User user, string ConfirmPassword)
-        //{
-        //    //InitializeDatabase();
-
-        //    var userFromDb = conn.Table<User>().FirstOrDefault(u=>u.UserID==user.UserID);
-        //    if (userFromDb ==null)
-        //    {
-        //        Shell.Current.DisplayAlert("Eroare", "Utilizatorul nu s-a regasit in baza de date", "Ok");
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        if (BCrypt.Net.BCrypt.Verify(ConfirmPassword,user.Password)) 
-        //        {
-        //            return -1;
-        //        }
-        //        else
-        //        {
-        //            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(ConfirmPassword);
-        //            userFromDb.Password = hashedPassword;
-
-        //            return conn.Update(userFromDb);
-        //        }
-        //    }
-        //}
-        //public int DeleteUser(int id)
-        //{
-        //   // InitializeDatabase();
-
-        //    return conn.Table<User>().Delete(u=>u.UserID == id);
-        //}
     }
 }

@@ -10,12 +10,6 @@
         <Label Text="Lista Solicitari" FontSize="Medium" FontAttributes="Bold"  HorizontalOptions="Center" Margin="20"/>
         <CollectionView x:Name="RequestsCollectionView" SelectionMode="None" Margin="0,30">
             <CollectionView.ItemTemplate>
-                <!--<DataTemplate>
-                    <StackLayout Orientation="Horizontal" Padding="10">
-                        <Label Text="{Binding Description}" VerticalOptions="Center"/>
-                        <Button Text="View" Clicked="OnViewRequestClicked" CommandParameter="{Binding RequestID}" />
-                    </StackLayout>
-                </DataTemplate>-->
                 <DataTemplate>
                     <Grid Padding="10" BackgroundColor="LightGrey" Margin="3">
                         <Grid.RowDefinitions>

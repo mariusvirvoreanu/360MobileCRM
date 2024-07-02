@@ -21,6 +21,7 @@ public partial class UpdateCustomerPage : ContentPage
     {
         InitializeComponent();
     }
+    
     private async void LoadCustomer(int customerId)
     {
         var customer = await DatabaseHelper.GetCustomerByIdAsync(customerId);
@@ -31,7 +32,6 @@ public partial class UpdateCustomerPage : ContentPage
         PhoneEntry.Text = customer.Phone;
         AddressEntry.Text = customer.Address;
     }
-
     private async void OnUpdateClicked(object sender, EventArgs e)
     {
         var customer = new Customer
@@ -44,7 +44,7 @@ public partial class UpdateCustomerPage : ContentPage
         };
 
         await DatabaseHelper.UpdateCustomerAsync(customer);
-        //Navigate back to customer details page
+        //Navigare bac pagina detalii client
         await Shell.Current.Navigation.PopAsync();
     }
 }
