@@ -236,6 +236,7 @@ D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-d
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet-debug.dylib
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet.a
 D:\Dizertatie\CRM_App\CRM_App\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
+D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\build-signature\signature
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\mauiimage.inputs
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\mauifont.inputs
 D:\Dizertatie\CRM_App\CRM_App\obj\Debug\net7.0-ios\iossimulator-x64\mauisplash.inputs
