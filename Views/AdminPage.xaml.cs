@@ -52,6 +52,7 @@ public partial class AdminPage : ContentPage
             {
                 await DisplayAlert("Info", "Parola resetata cu succes", "Ok");
             }
+            return;
         }
 
         bool deleteUser = await DisplayAlert("Stergere utilizator", $"Stergem utilizator: {user.Username} ?", "Da", "Nu");
